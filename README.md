@@ -1,7 +1,8 @@
 
   # E-commerce Website Design
 
-  This is a code bundle for E-commerce Website Design. The original project is available at https://www.figma.com/design/z3YrITqVzRkLKpUrgAqN6Y/E-commerce-Website-Design.
+  This is a code bundle for E-commerce Website Design. The original project is available at https://vinatge-vault-hosted.vercel.app/ .
+  
 
   ## Running the code
 
