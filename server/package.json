@@ -1,0 +1,35 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "start:prod": "npm run build && npm run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@emailjs/nodejs": "^5.0.2",
+    "@paypal/checkout-server-sdk": "^1.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "emailjs": "^4.0.3",
+    "express": "^4.21.1",
+    "mongoose": "^8.6.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.5",
+    "@types/paypal__checkout-server-sdk": "^1.0.8",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.9.3"
+  }
+}

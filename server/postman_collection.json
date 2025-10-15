@@ -1,0 +1,59 @@
+{
+  "info": {
+    "name": "Ecommerce Server",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["health"]
+        }
+      }
+    },
+    {
+      "name": "Create Order",
+      "request": {
+        "method": "POST",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"items\": [{\n    \"productId\": \"1\",\n    \"name\": \"Vintage Chair\",\n    \"price\": 120,\n    \"quantity\": 1\n  }],\n  \"subtotal\": 120,\n  \"tax\": 0,\n  \"shipping\": 0,\n  \"total\": 120,\n  \"currency\": \"USD\",\n  \"customer\": {\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\"\n  }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/orders/create",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api","orders","create"]
+        }
+      }
+    },
+    {
+      "name": "Capture Order",
+      "request": {
+        "method": "POST",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"orderId\": \"<dbId>\",\n  \"paypalOrderId\": \"<paypalId>\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/orders/capture",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api","orders","capture"]
+        }
+      }
+    }
+  ]
+}
+
